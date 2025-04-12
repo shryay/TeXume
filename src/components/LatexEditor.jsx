@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MonacoEditor from "@monaco-editor/react";
+import config from "../config";
 
+const backendURL = config.backendURL;
 export default function LatexEditor() {
   const [latexCode, setLatexCode] = useState(
     "\\documentclass{article}\n\\begin{document}\n" +
@@ -15,7 +17,7 @@ export default function LatexEditor() {
     setIsCompiling(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:8080/compile/", {
+      const res = await fetch(`${backendURL}/api/compile/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
