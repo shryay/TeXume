@@ -1,5 +1,0 @@
-Server Error: Cannot run program "pdflatex": CreateProcess error=2, The system cannot find the file specified
-C:\Users\HP\OneDrive\Desktop\Learning\AI Resume Builder\AI-Resume_Builder-FE>curl -X POST http://localhost:8080/Compile ^-H "Content-Type: application/json" ^-d "{\"code\": \"\\\\documentclass{article}\\\\begin{document}Hello from CMD!\\\\end{document}\"}" ^--output output.pdf
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100   198  100   109  100    89    863    704 --:--:-- --:--:-- --:--:--  1571

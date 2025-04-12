@@ -4,11 +4,83 @@ import config from "../config";
 
 const backendURL = config.backendURL;
 export default function LatexEditor() {
-  const [latexCode, setLatexCode] = useState(
-    "\\documentclass{article}\n\\begin{document}\n" +
-      "\n".repeat(40) +
-      "Hello, world!\n\\end{document}"
-  );
+  const [latexCode, setLatexCode] = useState(`
+\\documentclass[12pt]{article}
+\\usepackage[margin=1in]{geometry}
+
+\\begin{document}
+
+% Header
+\\begin{center}
+    {\\Huge \\textbf{John Doe}}\\\\
+    123 Main Street, City, ST 12345 \\\\
+    (123) 456-7890 \\quad
+    john.doe@email.com \\quad
+    linkedin.com/in/johndoe \\quad
+    github.com/johndoe
+\\end{center}
+
+\\hrule
+\\vspace{0.2in}
+
+% Education
+\\noindent\\textbf{Education} \\\\
+\\textbf{Bachelor of Science in Computer Science} \\hfill May 2024 \\\\
+University of Example, City, ST \\\\
+GPA: 3.8/4.0
+
+\\vspace{0.2in}
+\\hrule
+\\vspace{0.2in}
+
+% Experience
+\\noindent\\textbf{Experience} \\\\
+\\textbf{Software Developer Intern}, Example Corp \\hfill Jun 2023 -- Aug 2023 \\\\
+- Developed internal tools using Python to automate reporting, reducing manual effort by 40\\% \\\\
+- Collaborated with frontend and backend teams to improve API performance
+
+\\vspace{0.1in}
+
+\\textbf{Research Assistant}, University of Example \\hfill Jan 2023 -- May 2023 \\\\
+- Assisted in developing a machine learning model to detect fraudulent transactions \\\\
+- Conducted literature reviews and contributed to a published paper
+
+\\vspace{0.2in}
+\\hrule
+\\vspace{0.2in}
+
+% Projects
+\\noindent\\textbf{Projects} \\\\
+\\textbf{Movie Recommendation System} \\\\
+- Built a collaborative filtering model using Python and Scikit-Learn to recommend movies \\\\
+- Implemented web interface with Flask
+
+\\vspace{0.1in}
+\\textbf{Portfolio Website} \\\\
+- Designed and deployed a personal website using HTML, CSS, and basic JavaScript
+
+\\vspace{0.2in}
+\\hrule
+\\vspace{0.2in}
+
+% Skills
+\\noindent\\textbf{Skills} \\\\
+Programming: Python, Java, C++, HTML, CSS, JavaScript \\\\
+Tools: Git, MySQL, Linux, VS Code
+
+\\vspace{0.2in}
+\\hrule
+\\vspace{0.2in}
+
+% Certifications
+\\noindent\\textbf{Certifications} \\\\
+- Python for Everybody – Coursera \\\\
+- Java Programming and Software Engineering Fundamentals – Coursera
+
+\\hrule
+
+\\end{document}
+  `);
   const [pdfBlobUrl, setPdfBlobUrl] = useState("");
   const [isCompiling, setIsCompiling] = useState(false);
   const [error, setError] = useState(null);
