@@ -17,7 +17,7 @@ export default function LatexEditor() {
     setIsCompiling(true);
     setError(null);
     try {
-      const res = await fetch(`${backendURL}/api/compile/`, {
+      const res = await fetch(`${backendURL}/api/compile`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
