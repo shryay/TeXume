@@ -82,10 +82,10 @@ const Home = () => {
       <Container maxWidth="lg">
         <Box sx={{ my: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
-            Welcome to AI Resume Builder
+            Welcome to LaTeX-based Resume Builder
           </Typography>
           <Typography variant="body1" paragraph>
-            Create professional resumes with the power of AI. Get started now!
+            Create professional resumes. Get started now!
           </Typography>
           <Button
             variant="contained"
