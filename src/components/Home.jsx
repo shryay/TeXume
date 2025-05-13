@@ -29,7 +29,7 @@ const Home = () => {
       <StyledAppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            ResumeBanao
+            TeXume
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <StyledButton component={Link} to="/">
